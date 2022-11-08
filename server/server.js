@@ -131,6 +131,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.listen("3001", () => {
-  console.log("Servidor levantado en el puerto 3001");
+app.listen("3000", () => {
+  console.log("Servidor levantado en el puerto 3000");
 });
