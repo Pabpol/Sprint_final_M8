@@ -1,46 +1,70 @@
 import React, { Fragment } from "react";
 
+
 const Register = () => {
+
   return (
     <Fragment>
       <h1>Skate Park</h1>
 
-      <div class="py-4">
+      <div className="py-4">
         <h2>Registro</h2>
-        <hr class="w-50" />
+        <hr className="w-50" />
 
-        <form>
-          <div class="form-group row w-50 m-auto">
-            <div class="form-group col-12 col-sm-6">
+        <form
+          action="http://localhost:3001/skater"
+          method="POST"
+          encType="multipart/form-data"
+        >
+          <div className="form-group row w-50 m-auto">
+            <div className="form-group col-12 col-sm-6">
               <label>Email</label>
-              <input class="form-control m-auto" />
+              <input className="form-control m-auto" type="mail" name="email" />
             </div>
-            <div class="form-group col-12 col-sm-6">
+            <div className="form-group col-12 col-sm-6">
               <label>Nombre</label>
-              <input class="form-control m-auto" />
+              <input
+                className="form-control m-auto"
+                type="text"
+                name="nombre"
+              />
             </div>
-            <div class="form-group col-12 col-sm-6">
+            <div className="form-group col-12 col-sm-6">
               <label>Password</label>
-              <input class="form-control m-auto" />
+              <input
+                className="form-control m-auto"
+                type="password"
+                name="password"
+              />
             </div>
-            <div class="form-group col-12 col-sm-6">
+            <div className="form-group col-12 col-sm-6">
               <label>Repita la password</label>
-              <input class="form-control m-auto" />
+              <input className="form-control m-auto" type="password" />
             </div>
-            <div class="form-group col-12 col-sm-6">
+            <div className="form-group col-12 col-sm-6">
               <label>Años de experiencia</label>
-              <input class="form-control m-auto" />
+              <input
+                className="form-control m-auto"
+                type="number"
+                name="anos_experiencia"
+              />
             </div>
-            <div class="form-group col-12 col-sm-6">
+            <div className="form-group col-12 col-sm-6">
               <label>Especialidad</label>
-              <input class="form-control m-auto" />
+              <input
+                className="form-control m-auto"
+                type="text"
+                name="especialidad"
+              />
             </div>
-            <div class="form-group col-12 col-sm-12">
+            <div className="form-group col-12 col-sm-12">
               <label>Foto de perfil</label>
-              <input type="file" />
+              <input type="file" name="foto" />
             </div>
           </div>
-          <button class="btn btn-info mb-3">Registrarme</button>
+          <button type="submit" className="btn btn-info mb-3" >
+            Registrarme
+          </button>
           <p>
             <a href="login"> Iniciar sesión</a>
           </p>

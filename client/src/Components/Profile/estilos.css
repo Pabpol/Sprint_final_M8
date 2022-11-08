@@ -20,13 +20,6 @@ body {
       height: 60px;
   }
   
-  .activo{
-    color: rgb(42, 165, 52);
-  }
-  .inactivo{
-    color: rgb(218, 214, 29);
-  }
-  
   input{
       text-align: center;
   }

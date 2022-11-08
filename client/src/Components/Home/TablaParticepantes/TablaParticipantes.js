@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const TablaParticipantes = () => {
+  const [skaters, setSkaters] = useState([]);
+
+  async function getSkaters() {
+    const response = await axios.get(
+      `http://localhost:3001/skaters`
+    );
+    setSkaters(response.data);
+  }
+
+  useEffect(() => {
+    getSkaters();
+  }, []);
+
   return (
-    <table class="table table-dark">
+    <table className="table table-dark">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -14,36 +28,20 @@ const TablaParticipantes = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>
-            <div></div>
-          </td>
-          <td>Tony Hawk</td>
-          <td>12</td>
-          <td>Kickflip</td>
-          <td class="text-success font-weight-bold">Aprobado</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>
-            <div></div>
-          </td>
-          <td>Evelien Bouilliart</td>
-          <td>10</td>
-          <td>Heelflip</td>
-          <td class="text-success font-weight-bold">Aprobado</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>
-            <div></div>
-          </td>
-          <td>Danny Way</td>
-          <td>8</td>
-          <td>Ollie</td>
-          <td class="text-warning font-weight-bold">En revisión</td>
-        </tr>
+      {skaters.map((skater, index) => (
+            <tr key={skater.id}>
+              <td>{index + 1}</td>
+              <td>
+                <img src={`http://localhost:3001/${skater.foto}`} alt="imagen de perfil del skater"></img>
+              </td>
+              <td>{skater.nombre}</td>
+              <td>{skater.anos_experiencia}</td>
+              <td>{skater.especialidad}</td>
+              <td>
+                {skater.estado ? <p className="activo">Activo</p>:<p className="inactivo">Inactivo</p>}
+              </td>
+            </tr>
+          ))}
       </tbody>
     </table>
   );
