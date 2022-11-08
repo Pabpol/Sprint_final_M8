@@ -6,7 +6,7 @@ const TablaParticipantes = () => {
 
   async function getSkaters() {
     const response = await axios.get(
-      `http://localhost:3001/skaters`
+      `https://sprintfinalm8-production.up.railway.app/skaters`
     );
     setSkaters(response.data);
   }

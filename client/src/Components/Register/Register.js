@@ -12,7 +12,7 @@ const Register = () => {
         <hr className="w-50" />
 
         <form
-          action="http://localhost:3001/skater"
+          action="https://sprintfinalm8-production.up.railway.app/skater"
           method="POST"
           encType="multipart/form-data"
         >

@@ -16,7 +16,7 @@ const Login = () => {
       email: inputs.email,
       password: inputs.password
     };
-    const response = await axios.post("http://localhost:3001/login", {
+    const response = await axios.post("https://sprintfinalm8-production.up.railway.app/login", {
       skater,
     });
     console.log(response);

@@ -30,7 +30,7 @@ const Profile = () => {
 
   async function getSkater() {
     const response = await axios.get(
-      `http://localhost:3001/skaters/${data.email}`
+      `https://sprintfinalm8-production.up.railway.app/skaters/${data.email}`
     );
     setSkater(response.data);
   }
@@ -57,7 +57,7 @@ const Profile = () => {
       especialidad: inputs.especialidad,
     };
     const response = await axios.put(
-      `http://localhost:3001/skater/${skater.id}`,
+      `https://sprintfinalm8-production.up.railway.app/skater/${skater.id}`,
       {
         skaterEdit,
       }
@@ -69,7 +69,7 @@ const Profile = () => {
 
   const deleteSkater = async () => {
     const response = await axios.delete(
-      `http://localhost:3001/skater/${skater.id}`
+      `https://sprintfinalm8-production.up.railway.app/skater/${skater.id}`
     );
     if (response.status === 200) {
       alert("Perfil fué eliminado con éxito");
