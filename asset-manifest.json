@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Sprint_final_M8/client/static/css/main.17b2c018.css",
+    "main.js": "/Sprint_final_M8/client/static/js/main.21abd6ee.js",
+    "index.html": "/Sprint_final_M8/client/index.html",
+    "main.17b2c018.css.map": "/Sprint_final_M8/client/static/css/main.17b2c018.css.map",
+    "main.21abd6ee.js.map": "/Sprint_final_M8/client/static/js/main.21abd6ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17b2c018.css",
+    "static/js/main.21abd6ee.js"
+  ]
+}
